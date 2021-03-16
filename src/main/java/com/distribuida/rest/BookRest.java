@@ -5,6 +5,7 @@ import com.distribuida.model.BookResource;
 import io.quarkus.panache.common.Page;
 import io.quarkus.panache.common.Sort;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -12,6 +13,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/books")
+@ApplicationScoped
 public class BookRest {
 
     @Inject

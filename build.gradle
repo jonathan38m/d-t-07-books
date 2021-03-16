@@ -30,6 +30,10 @@ dependencies {
     // https://mvnrepository.com/artifact/io.quarkus/quarkus-jdbc-mysql
     implementation group: 'io.quarkus', name: 'quarkus-jdbc-mysql', version: '1.12.0.Final'
 
+    compile "com.ecwid.consul:consul-api:1.4.5"
+
+    implementation group: 'io.quarkus', name: 'quarkus-smallrye-health', version: '1.12.2.Final'
+
 
 
 }
