@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' version '1.12.0.Final'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    quarkusVersion = '1.12.0.Final'
+}
+
+dependencies {
+
+    implementation enforcedPlatform("io.quarkus:quarkus-universe-bom:${quarkusVersion}")
+
+    // https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-orm-rest-data-panache
+    implementation group: 'io.quarkus', name: 'quarkus-hibernate-orm-rest-data-panache', version: '1.12.0.Final'
+
+
+
+    // https://mvnrepository.com/artifact/io.quarkus/quarkus-resteasy-jackson
+    implementation group: 'io.quarkus', name: 'quarkus-resteasy-jackson', version: '1.12.0.Final'
+
+
+    // https://mvnrepository.com/artifact/io.quarkus/quarkus-jdbc-mysql
+    implementation group: 'io.quarkus', name: 'quarkus-jdbc-mysql', version: '1.12.0.Final'
+
+
+
+}
+
+test {
+}
